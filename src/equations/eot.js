@@ -1,4 +1,4 @@
-export default function eot() {
+export default function eot(date) {
 	const pi = 3.14159265359
 	
 	const w = 2*pi/365.24 //radians
