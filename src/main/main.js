@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Landing from "../landing/landing";
+import eot from '../equations/eot'
 
 export default class Main extends Component {
     constructor(props) {
@@ -14,11 +15,16 @@ export default class Main extends Component {
         this.setState({date:e.target.value})
     };
 
+	handleSubmit(e) {
+        e.preventDefault();
+		console.log(eot(this.state.date))
+	}
+
     render() {
         return (
             <>
                 <Landing />
-                <form onSubmit={(e) => this.handleSubmit()}>
+                <form onSubmit={(e) => this.handleSubmit(e)}>
                     <label htmlFor="day"> Date: </label>
                     <input
                         type="date"
