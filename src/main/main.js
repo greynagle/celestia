@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Landing from "../landing/landing";
 import eot from '../equations/eot'
+import moontime from '../equations/moontime'
 
 export default class Main extends Component {
     constructor(props) {
@@ -18,6 +19,8 @@ export default class Main extends Component {
 	handleSubmit(e) {
         e.preventDefault();
 		console.log(eot(this.state.date))
+		console.log(moontime(this.state.date))
+
 	}
 
     render() {
